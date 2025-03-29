@@ -1,0 +1,27 @@
+{
+  "translation": {
+    "title": "Recetario de Café",
+    "filters": {
+      "all": "Todos",
+      "hot": "Calientes",
+      "cold": "Fríos",
+      "withAlcohol": "Con Alcohol",
+      "withoutAlcohol": "Sin Alcohol",
+      "allAlcohol": "Con/Sin Alcohol"
+    },
+    "recipe": {
+      "ingredients": "Ingredientes",
+      "coffeeGrams": "Gramos de café",
+      "proportions": "Proporciones",
+      "preparation": "Preparación",
+      "proTip": "Pro Tip"
+    },
+    "language": {
+      "en": "Inglés",
+      "es": "Español",
+      "pt": "Portugués",
+      "ko": "Coreano",
+      "languageSelector": "Seleccionar idioma"
+    }
+  }
+} 

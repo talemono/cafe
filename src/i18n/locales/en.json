@@ -1,0 +1,27 @@
+{
+  "translation": {
+    "title": "Coffee Recipe Book",
+    "filters": {
+      "all": "All",
+      "hot": "Hot",
+      "cold": "Cold",
+      "withAlcohol": "With Alcohol",
+      "withoutAlcohol": "Without Alcohol",
+      "allAlcohol": "With/Without Alcohol"
+    },
+    "recipe": {
+      "ingredients": "Ingredients",
+      "coffeeGrams": "Coffee grams",
+      "proportions": "Proportions",
+      "preparation": "Preparation",
+      "proTip": "Pro Tip"
+    },
+    "language": {
+      "en": "English",
+      "es": "Spanish",
+      "pt": "Portuguese",
+      "ko": "Korean",
+      "languageSelector": "Select language"
+    }
+  }
+} 

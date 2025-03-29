@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import data from '@emoji-mart/data';
 import Picker from '@emoji-mart/react';
 import { Thermometer } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from './components/LanguageSelector';
 
 interface Recipe {
   id: string;
@@ -334,6 +336,7 @@ const recipes: Recipe[] = [
 ];
 
 function App() {
+  const { t, i18n } = useTranslation();
   const [activeRecipe, setActiveRecipe] = useState<string | null>(null);
   const [temperatureFilter, setTemperatureFilter] = useState<'all' | 'hot' | 'cold'>('all');
   const [alcoholFilter, setAlcoholFilter] = useState<'all' | 'with' | 'without'>('all');
@@ -358,12 +361,52 @@ function App() {
     return true;
   });
 
+  // Función para obtener la traducción de una propiedad de receta
+  const getRecipeTranslation = (recipeId: string, property: string) => {
+    // Intentamos obtener la traducción, si no existe usamos el valor original
+    try {
+      // Obtenemos el texto traducido del namespace 'recipes'
+      const translatedText = i18n.t(`${recipeId}.${property}`, { 
+        ns: 'recipes',
+        returnObjects: false,
+        defaultValue: '' // Valor por defecto en caso de que falle
+      });
+      
+      // Si tenemos una traducción válida, la usamos
+      if (translatedText && translatedText !== '' && 
+          translatedText !== `${recipeId}.${property}`) {
+        return translatedText;
+      }
+      
+      // Si no hay traducción, buscamos la receta original por ID
+      const originalRecipe = recipes.find(r => r.id === recipeId);
+      if (originalRecipe) {
+        // @ts-ignore - accedemos dinámicamente a la propiedad
+        return originalRecipe[property];
+      }
+      
+      return null;
+    } catch (error) {
+      console.error('Error al obtener traducción:', error);
+      // En caso de error, intentamos devolver el valor original
+      const originalRecipe = recipes.find(r => r.id === recipeId);
+      if (originalRecipe) {
+        // @ts-ignore - accedemos dinámicamente a la propiedad
+        return originalRecipe[property];
+      }
+      return null;
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#f4f0e8] p-6">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-[#5a3e36] mb-8">
-          ☕ Recetario de Café
-        </h1>
+        <div className="flex justify-between items-center mb-8">
+          <h1 className="text-4xl font-bold text-center text-[#5a3e36]">
+            ☕ {t('title')}
+          </h1>
+          <LanguageSelector />
+        </div>
 
         <div className="flex flex-wrap justify-center mb-4 space-x-4">
           <button
@@ -374,7 +417,7 @@ function App() {
                 : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
             }`}
           >
-            Todos
+            {t('filters.all')}
           </button>
           <button
             onClick={() => setTemperatureFilter('hot')}
@@ -384,7 +427,7 @@ function App() {
                 : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
             }`}
           >
-            <span>Calientes</span> 
+            <span>{t('filters.hot')}</span> 
             <span>🔥</span>
           </button>
           <button
@@ -395,7 +438,7 @@ function App() {
                 : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
             }`}
           >
-            <span>Fríos</span>
+            <span>{t('filters.cold')}</span>
             <span>❄️</span>
           </button>
         </div>
@@ -409,7 +452,7 @@ function App() {
                 : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
             }`}
           >
-            Con/Sin Alcohol
+            {t('filters.allAlcohol')}
           </button>
           <button
             onClick={() => setAlcoholFilter('with')}
@@ -419,7 +462,7 @@ function App() {
                 : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
             }`}
           >
-            <span>Con Alcohol</span> 
+            <span>{t('filters.withAlcohol')}</span> 
             <span>🍸</span>
           </button>
           <button
@@ -430,7 +473,7 @@ function App() {
                 : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
             }`}
           >
-            <span>Sin Alcohol</span>
+            <span>{t('filters.withoutAlcohol')}</span>
             <span>🍵</span>
           </button>
         </div>
@@ -447,7 +490,7 @@ function App() {
                   {recipe.emoji}
                 </div>
                 <h2 className="text-xl font-semibold text-[#7b4e3d] text-center mb-4">
-                  {recipe.title}
+                  {getRecipeTranslation(recipe.id, 'title') || recipe.title}
                 </h2>
                 
                 <div
@@ -456,11 +499,11 @@ function App() {
                   }`}
                 >
                   <div className="space-y-3 text-[#5a3e36]">
-                    <p><strong>Ingredientes:</strong> {recipe.ingredients}</p>
-                    <p><strong>Gramos de café:</strong> {recipe.grams}</p>
-                    <p><strong>Proporciones:</strong> {recipe.proportions}</p>
-                    <p><strong>Preparación:</strong> {recipe.preparation}</p>
-                    <p className="italic"><strong>Pro Tip:</strong> {recipe.proTip}</p>
+                    <p><strong>{t('recipe.ingredients')}:</strong> {getRecipeTranslation(recipe.id, 'ingredients') || recipe.ingredients}</p>
+                    <p><strong>{t('recipe.coffeeGrams')}:</strong> {getRecipeTranslation(recipe.id, 'grams') || recipe.grams}</p>
+                    <p><strong>{t('recipe.proportions')}:</strong> {getRecipeTranslation(recipe.id, 'proportions') || recipe.proportions}</p>
+                    <p><strong>{t('recipe.preparation')}:</strong> {getRecipeTranslation(recipe.id, 'preparation') || recipe.preparation}</p>
+                    <p className="italic"><strong>{t('recipe.proTip')}:</strong> {getRecipeTranslation(recipe.id, 'proTip') || recipe.proTip}</p>
                   </div>
                 </div>
               </div>

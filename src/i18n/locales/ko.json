@@ -1,0 +1,27 @@
+{
+  "translation": {
+    "title": "커피 레시피 북",
+    "filters": {
+      "all": "전체",
+      "hot": "뜨거운 음료",
+      "cold": "차가운 음료",
+      "withAlcohol": "알코올 함유",
+      "withoutAlcohol": "알코올 미포함",
+      "allAlcohol": "알코올 유무"
+    },
+    "recipe": {
+      "ingredients": "재료",
+      "coffeeGrams": "커피 그램",
+      "proportions": "비율",
+      "preparation": "준비 방법",
+      "proTip": "프로 팁"
+    },
+    "language": {
+      "en": "영어",
+      "es": "스페인어",
+      "pt": "포르투갈어",
+      "ko": "한국어",
+      "languageSelector": "언어 선택"
+    }
+  }
+} 

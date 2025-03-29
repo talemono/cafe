@@ -1,0 +1,27 @@
+{
+  "translation": {
+    "title": "Livro de Receitas de Café",
+    "filters": {
+      "all": "Todos",
+      "hot": "Quentes",
+      "cold": "Frios",
+      "withAlcohol": "Com Álcool",
+      "withoutAlcohol": "Sem Álcool",
+      "allAlcohol": "Com/Sem Álcool"
+    },
+    "recipe": {
+      "ingredients": "Ingredientes",
+      "coffeeGrams": "Gramas de café",
+      "proportions": "Proporções",
+      "preparation": "Preparação",
+      "proTip": "Dica Pro"
+    },
+    "language": {
+      "en": "Inglês",
+      "es": "Espanhol",
+      "pt": "Português",
+      "ko": "Coreano",
+      "languageSelector": "Selecionar idioma"
+    }
+  }
+} 

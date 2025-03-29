@@ -1,0 +1,226 @@
+{
+  "espresso": {
+    "title": "에스프레소",
+    "ingredients": "분쇄 커피 + 뜨거운 물",
+    "grams": "7-9g",
+    "proportions": "커피 7-9g / 물 25-30ml",
+    "preparation": "25-30초 동안 추출",
+    "proTip": "신선한 커피와 정수된 물을 사용하세요"
+  },
+  "americano": {
+    "title": "아메리카노",
+    "ingredients": "에스프레소 + 뜨거운 물",
+    "grams": "7-9g",
+    "proportions": "에스프레소 1샷(30ml) + 물 60-90ml",
+    "preparation": "에스프레소 먼저, 그 다음 물 추가",
+    "proTip": "부드러운 커피를 선호하는 고객을 위해 큰 컵에 제공"
+  },
+  "latte": {
+    "title": "라떼",
+    "ingredients": "에스프레소 + 스팀 밀크 + 거품",
+    "grams": "7-9g",
+    "proportions": "에스프레소 1샷(30ml) + 우유 150-180ml + 거품 1cm",
+    "preparation": "에스프레소 → 우유 → 라떼 아트",
+    "proTip": "우유 온도: 60-65°C"
+  },
+  "cappuccino": {
+    "title": "카푸치노",
+    "ingredients": "에스프레소 + 스팀 밀크 + 거품",
+    "grams": "7-9g",
+    "proportions": "에스프레소 1샷(30ml) + 우유 60ml + 거품 60ml",
+    "preparation": "에스프레소 → 우유 → 코코아/시나몬 뿌리기",
+    "proTip": "크리미한 거품을 위해 전유를 사용하세요"
+  },
+  "macchiato": {
+    "title": "마키아토",
+    "ingredients": "에스프레소 + 거품",
+    "grams": "7-9g",
+    "proportions": "에스프레소 1샷(30ml) + 거품 1큰술",
+    "preparation": "에스프레소 → 거품으로 \"얼룩\"내기",
+    "proTip": "작은 컵(60-90ml)에 제공"
+  },
+  "flat-white": {
+    "title": "플랫 화이트",
+    "ingredients": "에스프레소 + 마이크로폼 밀크",
+    "grams": "14-18g (2샷)",
+    "proportions": "에스프레소 2샷(60ml) + 우유 100-120ml",
+    "preparation": "에스프레소 → 통합된 우유(두꺼운 거품 없이)",
+    "proTip": "강한 맛과 부드러운 식감을 위한 이상적인 음료"
+  },
+  "mocha": {
+    "title": "모카",
+    "ingredients": "에스프레소 + 초콜릿 + 우유",
+    "grams": "7-9g",
+    "proportions": "에스프레소 1샷(30ml) + 초콜릿 15g + 우유 100ml",
+    "preparation": "에스프레소와 초콜릿 혼합 → 우유 추가 → 크림으로 장식",
+    "proTip": "고품질 초콜릿이 맛을 향상시킵니다"
+  },
+  "cortado": {
+    "title": "코르타도",
+    "ingredients": "에스프레소 + 뜨거운 우유",
+    "grams": "7-9g",
+    "proportions": "에스프레소 1샷(30ml) + 우유 30ml",
+    "preparation": "에스프레소 → 뜨거운 우유(거품 없음)",
+    "proTip": "우유로 커피의 산미를 균형 잡습니다"
+  },
+  "cold-brew": {
+    "title": "콜드 브루",
+    "ingredients": "분쇄 커피 + 차가운 물",
+    "grams": "100g",
+    "proportions": "1:4 (커피:물) → 커피 100g + 물 400ml",
+    "preparation": "차가운 상태에서 12-24시간 침출 → 필터링",
+    "proTip": "얼음과 바닐라 시럽과 함께 제공"
+  },
+  "iced-latte": {
+    "title": "아이스 라떼",
+    "ingredients": "에스프레소 + 차가운 우유 + 얼음",
+    "grams": "14-18g (2샷)",
+    "proportions": "에스프레소 2샷(60ml) + 우유 150ml + 얼음",
+    "preparation": "에스프레소 → 얼음 → 우유 → 섞기",
+    "proTip": "진한 우유 사용(예: 전유 또는 귀리 우유)"
+  },
+  "affogato": {
+    "title": "아포가토",
+    "ingredients": "에스프레소 + 바닐라 아이스크림",
+    "grams": "7-9g",
+    "proportions": "에스프레소 1샷(30ml) + 아이스크림 1스쿱",
+    "preparation": "아이스크림 위에 에스프레소를 부어주세요",
+    "proTip": "온도 대비를 위해 즉시 제공"
+  },
+  "long-black": {
+    "title": "롱 블랙",
+    "ingredients": "뜨거운 물 + 에스프레소",
+    "grams": "7-9g",
+    "proportions": "뜨거운 물 60-90ml + 에스프레소 1-2샷(30-60ml)",
+    "preparation": "뜨거운 물을 먼저 붓고, 그 다음 에스프레소 추가",
+    "proTip": "아메리카노와의 차이점은 에스프레소를 물 위에 부어 크레마를 보존한다는 것입니다"
+  },
+  "irish-coffee": {
+    "title": "아이리시 커피",
+    "ingredients": "커피 + 위스키 + 설탕 + 휘핑 크림",
+    "grams": "해당 없음(추출된 커피 사용)",
+    "proportions": "커피 1컵(240ml) + 위스키 30ml + 설탕 1티스푼 + 휘핑 크림",
+    "preparation": "커피, 위스키, 설탕을 혼합. 휘핑 크림으로 덮기",
+    "proTip": "특별한 자리나 추운 날씨에 이상적"
+  },
+  "espresso-romano": {
+    "title": "에스프레소 로마노",
+    "ingredients": "에스프레소 + 레몬 껍질",
+    "grams": "7-9g",
+    "proportions": "에스프레소 1샷(30ml) + 레몬 껍질",
+    "preparation": "에스프레소를 준비하고 컵 위에 레몬 껍질을 짜주세요",
+    "proTip": "레몬이 커피의 시트러스 향을 강조합니다"
+  },
+  "nitro-cold-brew": {
+    "title": "나이트로 콜드 브루",
+    "ingredients": "분쇄 커피 + 차가운 물 + 질소",
+    "grams": "100g",
+    "proportions": "1:4 (커피) → 커피 100g + 물 400ml",
+    "preparation": "콜드 브루 준비, 필터링 후 특수 장비를 사용하여 질소와 함께 제공",
+    "proTip": "질소 주입으로 맥주와 유사한 부드러운 거품이 생성됩니다"
+  },
+  "dirty-chai-latte": {
+    "title": "더티 차이 라떼",
+    "ingredients": "차이 티 + 우유 + 에스프레소",
+    "grams": "7-9g",
+    "proportions": "차이 티 1컵(240ml) + 에스프레소 1샷(30ml)",
+    "preparation": "우유와 차이 티 준비, 에스프레소 샷 추가",
+    "proTip": "차이의 향신료와 커피의 강한 맛이 결합됩니다"
+  },
+  "espresso-tonic": {
+    "title": "에스프레소 토닉",
+    "ingredients": "에스프레소 + 토닉 워터 + 얼음",
+    "grams": "7-9g",
+    "proportions": "에스프레소 1샷(30ml) + 토닉 워터 150ml",
+    "preparation": "얼음과 함께 토닉 워터를 제공한 다음, 천천히 에스프레소를 부어주세요",
+    "proTip": "더운 날에 상쾌하고 완벽한 음료"
+  },
+  "cafe-irlandes": {
+    "title": "아이리시 커피",
+    "ingredients": "필터 커피 + 아이리시 위스키 + 흑설탕 + 휘핑 크림",
+    "grams": "14-16g",
+    "proportions": "필터 커피 180ml + 위스키 45ml + 흑설탕 1큰술 + 휘핑 크림 30ml",
+    "preparation": "뜨거운 물로 컵을 데우세요 → 비우세요 → 설탕과 커피 추가 → 위스키 추가 → 휘핑 크림을 위에 띄우세요(섞지 않음)",
+    "proTip": "크림을 통해 마시면서 온도와 맛의 조합을 경험하세요"
+  },
+  "caramel-macchiato": {
+    "title": "캐러멜 마키아토",
+    "ingredients": "에스프레소 + 스팀 밀크 + 바닐라 시럽 + 캐러멜",
+    "grams": "14-18g (더블 에스프레소)",
+    "proportions": "에스프레소 60ml + 우유 180ml + 바닐라 시럽 15ml + 캐러멜 소스 10ml",
+    "preparation": "바닐라 시럽을 바닥에 → 스팀 밀크 → 에스프레소 → 격자 패턴으로 캐러멜 장식",
+    "proTip": "층을 감상할 수 있도록 투명한 유리에 제공"
+  },
+  "cafe-breve": {
+    "title": "브레베",
+    "ingredients": "에스프레소 + 하프 앤 하프(크림 반, 우유 반)",
+    "grams": "7-9g",
+    "proportions": "에스프레소 30ml + 크림과 우유 50/50 혼합물 120ml",
+    "preparation": "크림과 우유 혼합물 스팀 → 에스프레소 → 스팀된 혼합물 추가",
+    "proTip": "전통적인 라떼보다 더 풍부하고 크리미하며, 강한 맛을 선호하는 입맛에 완벽합니다"
+  },
+  "submarino": {
+    "title": "수브마리노",
+    "ingredients": "뜨거운 우유 + 초콜릿 바",
+    "grams": "해당 없음(커피 미포함)",
+    "proportions": "뜨거운 우유 200ml + 다크 초콜릿 바 30g",
+    "preparation": "끓이지 않고 우유를 데우세요 → 큰 컵에 제공 → 초콜릿 바를 \"잠수함\"처럼 수직으로 놓으세요",
+    "proTip": "고객이 취향에 따라 초콜릿을 담그고 녹일 수 있게 해주세요"
+  },
+  "jamaicano": {
+    "title": "자메이칸 커피",
+    "ingredients": "에스프레소 + 숙성된 럼 + 휘핑 크림 + 시나몬 + 초콜릿",
+    "grams": "7-9g",
+    "proportions": "에스프레소 30ml + 럼 20ml + 휘핑 크림 30ml + 시나몬 약간 + 초콜릿 가루",
+    "preparation": "에스프레소와 럼 혼합 → 위에 휘핑 크림 추가 → 시나몬과 초콜릿 가루 뿌리기",
+    "proTip": "장식 및 저어 마시기 위한 시나몬 스틱과 함께 제공"
+  },
+  "cremaet": {
+    "title": "크레마엣",
+    "ingredients": "에스프레소 + 브랜디 + 설탕 + 시나몬 + 레몬 껍질 + 커피 원두",
+    "grams": "7-9g",
+    "proportions": "에스프레소 30ml + 브랜디 20ml + 설탕 1큰술 + 시나몬 스틱 1개 + 레몬 1/4의 껍질 + 커피 원두 3개",
+    "preparation": "설탕, 시나몬, 레몬 껍질, 원두와 함께 브랜디 가열 → 캐러멜화될 때까지 플람베 → 뜨거운 에스프레소 추가",
+    "proTip": "발렌시아 전통 음료, 캐러멜화된 설탕을 즐길 수 있도록 작은 스푼과 함께 제공"
+  },
+  "cafe-escoces": {
+    "title": "스코티시 커피",
+    "ingredients": "에스프레소 커피 + 스카치 위스키 + 휘핑 크림 + 코코아 파우더",
+    "grams": "7-9g",
+    "proportions": "에스프레소 30ml + 스카치 위스키 30ml + 휘핑 크림 30ml + 코코아 파우더 약간",
+    "preparation": "에스프레소와 위스키 혼합 → 휘핑 크림으로 토핑 → 코코아 파우더 뿌리기",
+    "proTip": "커피의 풍미를 강조하기 위해 스모키한 위스키를 사용하세요"
+  },
+  "iced-coffee-latte": {
+    "title": "아이스 커피 라떼",
+    "ingredients": "에스프레소 커피 + 차가운 우유 + 얼음 + 시럽 (선택사항)",
+    "grams": "14-18g (더블 에스프레소)",
+    "proportions": "에스프레소 60ml + 차가운 우유 120ml + 얼음 많이 + 시럽 15ml (선택사항)",
+    "preparation": "에스프레소를 준비하고 식히세요 → 유리에 얼음을 채우세요 → 차가운 우유 추가 → 에스프레소 붓기 → 취향에 따라 시럽 추가",
+    "proTip": "더 진한 맛을 위해 커피를 얼음 큐브로 얼려 일반 얼음 대신 사용하세요"
+  },
+  "cafe-goloso": {
+    "title": "달콤한 커피",
+    "ingredients": "에스프레소 커피 + 연유 + 휘핑 크림 + 초콜릿 가루",
+    "grams": "7-9g",
+    "proportions": "에스프레소 30ml + 연유 30ml + 휘핑 크림 30ml + 장식용 초콜릿 가루",
+    "preparation": "컵 바닥에 연유 붓기 → 에스프레소 추가 → 휘핑 크림으로 토핑 → 초콜릿 가루로 장식",
+    "proTip": "달콤함을 균형 있게 하기 위해 비스킷과 함께 제공"
+  },
+  "batido-cafe": {
+    "title": "커피 밀크셰이크",
+    "ingredients": "차가운 에스프레소 커피 + 바닐라 아이스크림 + 차가운 우유 + 휘핑 크림",
+    "grams": "14-18g (더블 에스프레소)",
+    "proportions": "차가운 에스프레소 60ml + 바닐라 아이스크림 2스쿱 + 차가운 우유 120ml + 장식용 휘핑 크림",
+    "preparation": "에스프레소를 준비하고 식히세요 → 블렌더에 아이스크림과 우유와 함께 섞기 → 큰 유리잔에 제공 → 휘핑 크림으로 장식",
+    "proTip": "추가적인 맛을 위해 혼합물에 코코아 파우더 1티스푼 추가"
+  },
+  "cafe-aperitivo": {
+    "title": "아페리티프 커피",
+    "ingredients": "에스프레소 커피 + 레드 베르무트 + 오렌지 트위스트 + 얼음",
+    "grams": "7-9g",
+    "proportions": "에스프레소 30ml + 레드 베르무트 60ml + 오렌지 껍질 + 얼음",
+    "preparation": "에스프레소를 준비하고 식히세요 → 낮은 유리잔에 얼음 추가 → 베르무트 붓기 → 차가운 에스프레소 추가 → 오렌지 껍질로 향 더하기",
+    "proTip": "흥미로운, 짠맛-쓴맛 대비를 위해 녹색 올리브와 함께 제공"
+  }
+} 

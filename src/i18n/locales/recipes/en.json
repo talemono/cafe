@@ -1,0 +1,226 @@
+{
+  "espresso": {
+    "title": "Espresso",
+    "ingredients": "Ground coffee + Hot water",
+    "grams": "7-9g",
+    "proportions": "7-9g coffee / 25-30ml water",
+    "preparation": "Extract in 25-30 seconds",
+    "proTip": "Use fresh coffee and filtered water"
+  },
+  "americano": {
+    "title": "Americano",
+    "ingredients": "Espresso + Hot water",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 60-90ml water",
+    "preparation": "Espresso first, then add water",
+    "proTip": "Serve in large cup for customers who prefer mild coffee"
+  },
+  "latte": {
+    "title": "Latte",
+    "ingredients": "Espresso + Steamed milk + Foam",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 150-180ml milk + 1cm foam",
+    "preparation": "Espresso → milk → latte art",
+    "proTip": "Milk temperature: 60-65°C"
+  },
+  "cappuccino": {
+    "title": "Cappuccino",
+    "ingredients": "Espresso + Steamed milk + Foam",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 60ml milk + 60ml foam",
+    "preparation": "Espresso → milk → sprinkle cocoa/cinnamon",
+    "proTip": "Use whole milk for creamy foam"
+  },
+  "macchiato": {
+    "title": "Macchiato",
+    "ingredients": "Espresso + Foam",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 1 tablespoon of foam",
+    "preparation": "Espresso → \"stain\" with foam",
+    "proTip": "Serve in small cup (60-90ml)"
+  },
+  "flat-white": {
+    "title": "Flat White",
+    "ingredients": "Espresso + Microfoamed milk",
+    "grams": "14-18g (2 shots)",
+    "proportions": "2 shots espresso (60ml) + 100-120ml milk",
+    "preparation": "Espresso → integrated milk (without thick foam)",
+    "proTip": "Ideal for intense flavor and silky texture"
+  },
+  "mocha": {
+    "title": "Mocha",
+    "ingredients": "Espresso + Chocolate + Milk",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 15g chocolate + 100ml milk",
+    "preparation": "Mix espresso with chocolate → add milk → decorate with cream",
+    "proTip": "High quality chocolate improves flavor"
+  },
+  "cortado": {
+    "title": "Cortado",
+    "ingredients": "Espresso + Hot milk",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 30ml milk",
+    "preparation": "Espresso → hot milk (no foam)",
+    "proTip": "Balances coffee acidity with milk"
+  },
+  "cold-brew": {
+    "title": "Cold Brew",
+    "ingredients": "Ground coffee + Cold water",
+    "grams": "100g",
+    "proportions": "1:4 (coffee:water) → 100g coffee + 400ml water",
+    "preparation": "Steep 12-24h in cold → filter",
+    "proTip": "Serve with ice and vanilla syrup"
+  },
+  "iced-latte": {
+    "title": "Iced Latte",
+    "ingredients": "Espresso + Cold milk + Ice",
+    "grams": "14-18g (2 shots)",
+    "proportions": "2 shots espresso (60ml) + 150ml milk + ice",
+    "preparation": "Espresso → ice → milk → shake",
+    "proTip": "Use thick milk (e.g. whole or oat)"
+  },
+  "affogato": {
+    "title": "Affogato",
+    "ingredients": "Espresso + Vanilla ice cream",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 1 scoop of ice cream",
+    "preparation": "Pour espresso over ice cream",
+    "proTip": "Serve immediately for thermal contrast"
+  },
+  "long-black": {
+    "title": "Long Black",
+    "ingredients": "Hot water + Espresso",
+    "grams": "7-9g",
+    "proportions": "60-90ml hot water + 1-2 shots espresso (30-60ml)",
+    "preparation": "Pour hot water first, then add espresso",
+    "proTip": "The difference with Americano is that espresso is poured over water, preserving the crema"
+  },
+  "irish-coffee": {
+    "title": "Irish Coffee",
+    "ingredients": "Coffee + Whiskey + Sugar + Whipped cream",
+    "grams": "Not applicable (uses brewed coffee)",
+    "proportions": "1 cup coffee (240ml) + 30ml whiskey + 1 teaspoon sugar + whipped cream",
+    "preparation": "Mix coffee, whiskey and sugar. Cover with whipped cream",
+    "proTip": "Ideal for special occasions or cold weather"
+  },
+  "espresso-romano": {
+    "title": "Espresso Romano",
+    "ingredients": "Espresso + Lemon peel",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + lemon peel",
+    "preparation": "Prepare espresso and squeeze a lemon peel over the cup",
+    "proTip": "The lemon enhances the citrus flavors of the coffee"
+  },
+  "nitro-cold-brew": {
+    "title": "Nitro Cold Brew",
+    "ingredients": "Ground coffee + Cold water + Nitrogen",
+    "grams": "100g",
+    "proportions": "1:4 (coffee) → 100g coffee + 400ml water",
+    "preparation": "Prepare cold brew, filter and serve with nitrogen using a special tower",
+    "proTip": "The nitrogen infusion creates a smooth foam similar to beer"
+  },
+  "dirty-chai-latte": {
+    "title": "Dirty Chai Latte",
+    "ingredients": "Chai tea + Milk + Espresso",
+    "grams": "7-9g",
+    "proportions": "1 cup chai tea (240ml) + 1 shot espresso (30ml)",
+    "preparation": "Prepare chai tea with milk, add a shot of espresso",
+    "proTip": "Combines chai spices with the robust flavor of coffee"
+  },
+  "espresso-tonic": {
+    "title": "Espresso Tonic",
+    "ingredients": "Espresso + Tonic water + Ice",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 150ml tonic water",
+    "preparation": "Serve tonic water with ice, then slowly pour espresso",
+    "proTip": "Refreshing and perfect for hot days"
+  },
+  "cafe-irlandes": {
+    "title": "Irish Coffee",
+    "ingredients": "Filter coffee + Irish whiskey + Brown sugar + Whipped cream",
+    "grams": "14-16g",
+    "proportions": "180ml filter coffee + 45ml whiskey + 1 tablespoon brown sugar + 30ml whipped cream",
+    "preparation": "Heat the cup with hot water → empty → add sugar and coffee → add whiskey → float whipped cream on top (without mixing)",
+    "proTip": "Drink through the cream to experience the mix of temperatures and flavors"
+  },
+  "caramel-macchiato": {
+    "title": "Caramel Macchiato",
+    "ingredients": "Espresso + Steamed milk + Vanilla syrup + Caramel",
+    "grams": "14-18g (double espresso)",
+    "proportions": "60ml espresso + 180ml milk + 15ml vanilla syrup + 10ml caramel sauce",
+    "preparation": "Vanilla syrup at the bottom → steamed milk → espresso → decorate with caramel in a grid pattern",
+    "proTip": "Serve in a transparent glass to see the layers"
+  },
+  "cafe-breve": {
+    "title": "Breve",
+    "ingredients": "Espresso + Half & half (half cream, half milk)",
+    "grams": "7-9g",
+    "proportions": "30ml espresso + 120ml of 50/50 cream and milk mix",
+    "preparation": "Steam the cream and milk mix → espresso → add steamed mix",
+    "proTip": "Richer and creamier than a traditional latte, perfect for palates that prefer more intense flavors"
+  },
+  "submarino": {
+    "title": "Submarino",
+    "ingredients": "Hot milk + Chocolate bar",
+    "grams": "Not applicable (no coffee)",
+    "proportions": "200ml hot milk + 30g dark chocolate bar",
+    "preparation": "Heat milk without boiling → serve in tall cup → place chocolate bar vertically as a \"submarine\"",
+    "proTip": "Let the diner submerge and melt the chocolate to their taste"
+  },
+  "jamaicano": {
+    "title": "Jamaican Coffee",
+    "ingredients": "Espresso + Aged rum + Whipped cream + Cinnamon + Chocolate",
+    "grams": "7-9g",
+    "proportions": "30ml espresso + 20ml rum + 30ml whipped cream + pinch of cinnamon + chocolate shavings",
+    "preparation": "Mix espresso with rum → add whipped cream on top → sprinkle cinnamon and chocolate shavings",
+    "proTip": "Serve with a cinnamon stick as decoration and to stir"
+  },
+  "cremaet": {
+    "title": "Cremaet",
+    "ingredients": "Espresso + Brandy + Sugar + Cinnamon + Lemon peel + Coffee beans",
+    "grams": "7-9g",
+    "proportions": "30ml espresso + 20ml brandy + 1 tablespoon sugar + 1 cinnamon stick + peel from 1/4 lemon + 3 coffee beans",
+    "preparation": "Heat brandy with sugar, cinnamon, lemon peel and beans → flambé until caramelized → add hot espresso",
+    "proTip": "Traditional from Valencia, serve with a small spoon to enjoy the caramelized sugar"
+  },
+  "cafe-escoces": {
+    "title": "Scottish Coffee",
+    "ingredients": "Espresso coffee + Scotch whisky + Whipped cream + Cocoa powder",
+    "grams": "7-9g",
+    "proportions": "30ml espresso + 30ml Scotch whisky + 30ml whipped cream + pinch of cocoa powder",
+    "preparation": "Mix espresso with whisky → top with whipped cream → sprinkle cocoa powder",
+    "proTip": "Use a smoky whisky to enhance the coffee notes"
+  },
+  "iced-coffee-latte": {
+    "title": "Iced Coffee Latte",
+    "ingredients": "Espresso coffee + Cold milk + Ice + Syrup (optional)",
+    "grams": "14-18g (double espresso)",
+    "proportions": "60ml espresso + 120ml cold milk + plenty of ice + 15ml syrup (optional)",
+    "preparation": "Prepare espresso and let cool → fill a glass with ice → add cold milk → pour espresso → add syrup to taste",
+    "proTip": "For a more intense flavor, freeze coffee into cubes and use instead of regular ice"
+  },
+  "cafe-goloso": {
+    "title": "Sweet Coffee",
+    "ingredients": "Espresso coffee + Condensed milk + Whipped cream + Grated chocolate",
+    "grams": "7-9g",
+    "proportions": "30ml espresso + 30ml condensed milk + 30ml whipped cream + grated chocolate for decoration",
+    "preparation": "Pour condensed milk at the bottom of the cup → add espresso → top with whipped cream → decorate with grated chocolate",
+    "proTip": "Serve with a cookie to accompany and balance the sweetness"
+  },
+  "batido-cafe": {
+    "title": "Coffee Milkshake",
+    "ingredients": "Cold espresso coffee + Vanilla ice cream + Cold milk + Whipped cream",
+    "grams": "14-18g (double espresso)",
+    "proportions": "60ml cold espresso + 2 scoops vanilla ice cream + 120ml cold milk + whipped cream for decoration",
+    "preparation": "Prepare espresso and let cool → mix in a blender with ice cream and milk → serve in tall glass → decorate with whipped cream",
+    "proTip": "Add a teaspoon of cocoa powder to the mix for an extra touch of flavor"
+  },
+  "cafe-aperitivo": {
+    "title": "Aperitif Coffee",
+    "ingredients": "Espresso coffee + Red vermouth + Orange twist + Ice",
+    "grams": "7-9g",
+    "proportions": "30ml espresso + 60ml red vermouth + orange peel + ice",
+    "preparation": "Prepare espresso and let cool → add ice to a low glass → pour vermouth → add cold espresso → aromatize with orange peel",
+    "proTip": "Serve with a green olive for an interesting salty-bitter contrast"
+  }
+} 

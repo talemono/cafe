@@ -1,0 +1,226 @@
+{
+  "espresso": {
+    "title": "Espresso",
+    "ingredients": "Café moído + Água quente",
+    "grams": "7-9g",
+    "proportions": "7-9g de café / 25-30ml de água",
+    "preparation": "Extrair em 25-30 segundos",
+    "proTip": "Use café fresco e água filtrada"
+  },
+  "americano": {
+    "title": "Americano",
+    "ingredients": "Espresso + Água quente",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 60-90ml água",
+    "preparation": "Espresso primeiro, depois adicione água",
+    "proTip": "Sirva em xícara grande para clientes que preferem café suave"
+  },
+  "latte": {
+    "title": "Latte",
+    "ingredients": "Espresso + Leite vaporizado + Espuma",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 150-180ml leite + 1cm espuma",
+    "preparation": "Espresso → leite → latte art",
+    "proTip": "Temperatura do leite: 60-65°C"
+  },
+  "cappuccino": {
+    "title": "Cappuccino",
+    "ingredients": "Espresso + Leite vaporizado + Espuma",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 60ml leite + 60ml espuma",
+    "preparation": "Espresso → leite → polvilhar cacau/canela",
+    "proTip": "Use leite integral para espuma cremosa"
+  },
+  "macchiato": {
+    "title": "Macchiato",
+    "ingredients": "Espresso + Espuma",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 1 colher de espuma",
+    "preparation": "Espresso → \"manchar\" com espuma",
+    "proTip": "Sirva em xícara pequena (60-90ml)"
+  },
+  "flat-white": {
+    "title": "Flat White",
+    "ingredients": "Espresso + Leite microespumado",
+    "grams": "14-18g (2 shots)",
+    "proportions": "2 shots espresso (60ml) + 100-120ml leite",
+    "preparation": "Espresso → leite integrado (sem espuma grossa)",
+    "proTip": "Ideal para sabor intenso e textura sedosa"
+  },
+  "mocha": {
+    "title": "Mocha",
+    "ingredients": "Espresso + Chocolate + Leite",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 15g chocolate + 100ml leite",
+    "preparation": "Misture espresso com chocolate → adicione leite → decore com creme",
+    "proTip": "Chocolate de alta qualidade melhora o sabor"
+  },
+  "cortado": {
+    "title": "Cortado",
+    "ingredients": "Espresso + Leite quente",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 30ml leite",
+    "preparation": "Espresso → leite quente (sem espuma)",
+    "proTip": "Equilibra acidez do café com leite"
+  },
+  "cold-brew": {
+    "title": "Cold Brew",
+    "ingredients": "Café moído + Água fria",
+    "grams": "100g",
+    "proportions": "1:4 (café:água) → 100g café + 400ml água",
+    "preparation": "Repousar 12-24h no frio → filtrar",
+    "proTip": "Sirva com gelo e xarope de baunilha"
+  },
+  "iced-latte": {
+    "title": "Latte Gelado",
+    "ingredients": "Espresso + Leite frio + Gelo",
+    "grams": "14-18g (2 shots)",
+    "proportions": "2 shots espresso (60ml) + 150ml leite + gelo",
+    "preparation": "Espresso → gelo → leite → agitar",
+    "proTip": "Use leite encorpado (ex: integral ou de aveia)"
+  },
+  "affogato": {
+    "title": "Affogato",
+    "ingredients": "Espresso + Sorvete de baunilha",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 1 bola de sorvete",
+    "preparation": "Despeje espresso sobre o sorvete",
+    "proTip": "Sirva imediatamente para contraste térmico"
+  },
+  "long-black": {
+    "title": "Long Black",
+    "ingredients": "Água quente + Espresso",
+    "grams": "7-9g",
+    "proportions": "60-90ml água quente + 1-2 shots espresso (30-60ml)",
+    "preparation": "Despeje água quente primeiro, depois adicione espresso",
+    "proTip": "A diferença com o Americano é que o espresso é despejado sobre a água, preservando o creme"
+  },
+  "irish-coffee": {
+    "title": "Irish Coffee",
+    "ingredients": "Café + Whiskey + Açúcar + Creme batido",
+    "grams": "Não aplicável (usa café preparado)",
+    "proportions": "1 xícara café (240ml) + 30ml whiskey + 1 colher de chá açúcar + creme batido",
+    "preparation": "Misture café, whiskey e açúcar. Cubra com creme batido",
+    "proTip": "Ideal para ocasiões especiais ou climas frios"
+  },
+  "espresso-romano": {
+    "title": "Espresso Romano",
+    "ingredients": "Espresso + Casca de limão",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + casca de limão",
+    "preparation": "Prepare espresso e esprema uma casca de limão sobre a xícara",
+    "proTip": "O limão realça os sabores cítricos do café"
+  },
+  "nitro-cold-brew": {
+    "title": "Nitro Cold Brew",
+    "ingredients": "Café moído + Água fria + Nitrogênio",
+    "grams": "100g",
+    "proportions": "1:4 (café) → 100g café + 400ml água",
+    "preparation": "Prepare cold brew, filtre e sirva com nitrogênio usando uma torre especial",
+    "proTip": "A infusão de nitrogênio cria uma espuma suave semelhante à cerveja"
+  },
+  "dirty-chai-latte": {
+    "title": "Dirty Chai Latte",
+    "ingredients": "Chá chai + Leite + Espresso",
+    "grams": "7-9g",
+    "proportions": "1 xícara chá chai (240ml) + 1 shot espresso (30ml)",
+    "preparation": "Prepare chá chai com leite, adicione um shot de espresso",
+    "proTip": "Combina as especiarias do chai com o sabor robusto do café"
+  },
+  "espresso-tonic": {
+    "title": "Espresso Tonic",
+    "ingredients": "Espresso + Água tônica + Gelo",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 150ml água tônica",
+    "preparation": "Sirva água tônica com gelo, depois despeje espresso lentamente",
+    "proTip": "Refrescante e perfeito para dias quentes"
+  },
+  "cafe-irlandes": {
+    "title": "Café Irlandês",
+    "ingredients": "Café filtrado + Whiskey irlandês + Açúcar mascavo + Creme batido",
+    "grams": "14-16g",
+    "proportions": "180ml café filtrado + 45ml whiskey + 1 colher açúcar mascavo + 30ml creme batido",
+    "preparation": "Aqueça a xícara com água quente → esvazie → adicione açúcar e café → incorpore whiskey → flutue o creme batido em cima (sem misturar)",
+    "proTip": "Beba através do creme para experimentar a mistura de temperaturas e sabores"
+  },
+  "caramel-macchiato": {
+    "title": "Caramel Macchiato",
+    "ingredients": "Espresso + Leite vaporizado + Xarope de baunilha + Caramelo",
+    "grams": "14-18g (duplo espresso)",
+    "proportions": "60ml espresso + 180ml leite + 15ml xarope de baunilha + 10ml calda de caramelo",
+    "preparation": "Xarope de baunilha no fundo → leite vaporizado → espresso → decorar com caramelo em padrão de grade",
+    "proTip": "Sirva em copo transparente para apreciar as camadas"
+  },
+  "cafe-breve": {
+    "title": "Café Breve",
+    "ingredients": "Espresso + Metade creme, metade leite",
+    "grams": "7-9g",
+    "proportions": "30ml espresso + 120ml da mistura 50/50 de creme e leite",
+    "preparation": "Vaporize a mistura de creme e leite → espresso → adicione a mistura vaporizada",
+    "proTip": "Mais rico e cremoso que um latte tradicional, perfeito para paladares que preferem sabores mais intensos"
+  },
+  "submarino": {
+    "title": "Submarino",
+    "ingredients": "Leite quente + Barra de chocolate",
+    "grams": "Não aplicável (não leva café)",
+    "proportions": "200ml leite quente + 30g barra de chocolate amargo",
+    "preparation": "Aqueça o leite sem ferver → sirva em xícara alta → coloque a barra de chocolate verticalmente como \"submarino\"",
+    "proTip": "Deixe que o cliente mergulhe e derreta o chocolate ao seu gosto"
+  },
+  "jamaicano": {
+    "title": "Jamaicano",
+    "ingredients": "Espresso + Rum envelhecido + Creme batido + Canela + Chocolate",
+    "grams": "7-9g",
+    "proportions": "30ml espresso + 20ml rum + 30ml creme batido + pitada de canela + raspas de chocolate",
+    "preparation": "Misture o espresso com rum → adicione creme batido em cima → polvilhe canela e raspas de chocolate",
+    "proTip": "Sirva com um palito de canela como decoração e para mexer"
+  },
+  "cremaet": {
+    "title": "Cremaet",
+    "ingredients": "Espresso + Brandy + Açúcar + Canela + Casca de limão + Grãos de café",
+    "grams": "7-9g",
+    "proportions": "30ml espresso + 20ml brandy + 1 colher de açúcar + 1 pau de canela + casca de 1/4 limão + 3 grãos de café",
+    "preparation": "Aqueça o brandy com açúcar, canela, casca de limão e grãos → flambe até caramelizar → adicione o espresso quente",
+    "proTip": "Tradicional de Valência, sirva com uma colher pequena para desfrutar do açúcar caramelizado"
+  },
+  "cafe-escoces": {
+    "title": "Café Escocês",
+    "ingredients": "Café espresso + Whisky escocês + Creme batido + Cacau em pó",
+    "grams": "7-9g",
+    "proportions": "30ml espresso + 30ml whisky escocês + 30ml creme batido + pitada de cacau em pó",
+    "preparation": "Misture o espresso com o whisky → coroe com creme batido → polvilhe cacau em pó",
+    "proTip": "Use um whisky defumado para realçar as notas do café"
+  },
+  "iced-coffee-latte": {
+    "title": "Café Latte Gelado",
+    "ingredients": "Café espresso + Leite frio + Gelo + Xarope (opcional)",
+    "grams": "14-18g (duplo espresso)",
+    "proportions": "60ml espresso + 120ml leite frio + bastante gelo + 15ml xarope (opcional)",
+    "preparation": "Prepare o espresso e deixe esfriar → encha um copo com gelo → adicione o leite frio → despeje o espresso → adicione xarope a gosto",
+    "proTip": "Para um sabor mais intenso, congele o café em cubos e use no lugar do gelo normal"
+  },
+  "cafe-goloso": {
+    "title": "Café Guloso",
+    "ingredients": "Café espresso + Leite condensado + Creme batido + Chocolate ralado",
+    "grams": "7-9g",
+    "proportions": "30ml espresso + 30ml leite condensado + 30ml creme batido + chocolate ralado para decorar",
+    "preparation": "Despeje o leite condensado no fundo da xícara → adicione o espresso → coroe com creme batido → decore com chocolate ralado",
+    "proTip": "Sirva com um biscoito para acompanhar e equilibrar a doçura"
+  },
+  "batido-cafe": {
+    "title": "Milkshake de Café",
+    "ingredients": "Café espresso frio + Sorvete de baunilha + Leite frio + Creme batido",
+    "grams": "14-18g (duplo espresso)",
+    "proportions": "60ml espresso frio + 2 bolas de sorvete de baunilha + 120ml leite frio + creme batido para decorar",
+    "preparation": "Prepare o espresso e deixe esfriar → misture em um liquidificador com o sorvete e o leite → sirva em copo alto → decore com creme batido",
+    "proTip": "Adicione uma colher de cacau em pó à mistura para um toque extra de sabor"
+  },
+  "cafe-aperitivo": {
+    "title": "Café Aperitivo",
+    "ingredients": "Café espresso + Vermute tinto + Twist de laranja + Gelo",
+    "grams": "7-9g",
+    "proportions": "30ml espresso + 60ml vermute tinto + casca de laranja + gelo",
+    "preparation": "Prepare o espresso e deixe esfriar → adicione gelo a um copo baixo → despeje o vermute → adicione o espresso frio → aromatize com a casca de laranja",
+    "proTip": "Sirva com uma azeitona verde para um contraste salgado-amargo interessante"
+  }
+} 
