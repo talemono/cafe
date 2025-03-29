@@ -13,6 +13,7 @@ interface Recipe {
   preparation: string;
   proTip: string;
   isHot: boolean;
+  hasAlcohol?: boolean;
 }
 
 const recipes: Recipe[] = [
@@ -157,7 +158,8 @@ const recipes: Recipe[] = [
     proportions: '1 taza café (240ml) + 30ml whiskey + 1 cucharadita azúcar + crema batida',
     preparation: 'Mezcla café, whiskey y azúcar. Cubre con crema batida',
     proTip: 'Ideal para ocasiones especiales o climas fríos',
-    isHot: true
+    isHot: true,
+    hasAlcohol: true
   },
   {
     id: 'espresso-romano',
@@ -202,20 +204,158 @@ const recipes: Recipe[] = [
     preparation: 'Sirve agua tónica con hielo, luego vierte espresso lentamente',
     proTip: 'Refrescante y perfecto para días calurosos',
     isHot: false
+  },
+  {
+    id: 'cafe-irlandes',
+    title: 'Café Irlandés',
+    emoji: '☕️🥃🍀',
+    ingredients: 'Café filtrado + Whiskey irlandés + Azúcar moreno + Crema batida',
+    grams: '14-16g',
+    proportions: '180ml café filtrado + 45ml whiskey + 1 cucharada azúcar moreno + 30ml crema batida',
+    preparation: 'Calienta la taza con agua caliente → vacía → añade azúcar y café → incorpora whiskey → flota la crema batida encima (sin mezclar)',
+    proTip: 'Bebe a través de la crema para experimentar la mezcla de temperaturas y sabores',
+    isHot: true,
+    hasAlcohol: true
+  },
+  {
+    id: 'caramel-macchiato',
+    title: 'Caramel Macchiato',
+    emoji: '☕️🍯✨',
+    ingredients: 'Espresso + Leche vaporizada + Jarabe de vainilla + Caramelo',
+    grams: '14-18g (doble espresso)',
+    proportions: '60ml espresso + 180ml leche + 15ml jarabe de vainilla + 10ml salsa de caramelo',
+    preparation: 'Jarabe de vainilla en el fondo → leche vaporizada → espresso → decorar con caramelo en patrón de rejilla',
+    proTip: 'Sirve en vaso transparente para apreciar las capas',
+    isHot: true
+  },
+  {
+    id: 'cafe-breve',
+    title: 'Café Breve',
+    emoji: '☕️🥛🍦',
+    ingredients: 'Espresso + Mitad crema para batir, mitad leche',
+    grams: '7-9g',
+    proportions: '30ml espresso + 120ml de mezcla 50/50 de crema y leche',
+    preparation: 'Vaporiza la mezcla de crema y leche → espresso → añade la mezcla vaporizada',
+    proTip: 'Más rico y cremoso que un latte tradicional, perfecto para paladares que prefieren sabores más intensos',
+    isHot: true
+  },
+  {
+    id: 'submarino',
+    title: 'Submarino',
+    emoji: '🥛🍫🚢',
+    ingredients: 'Leche caliente + Barra de chocolate',
+    grams: 'No aplica (no lleva café)',
+    proportions: '200ml leche caliente + 30g barra de chocolate negro',
+    preparation: 'Calienta la leche sin hervir → sirve en taza alta → coloca la barra de chocolate verticalmente como "submarino"',
+    proTip: 'Deja que el comensal sumerja y derrita el chocolate según su gusto',
+    isHot: true
+  },
+  {
+    id: 'jamaicano',
+    title: 'Jamaicano',
+    emoji: '☕️🥃🏝️',
+    ingredients: 'Espresso + Ron añejo + Crema batida + Canela + Chocolate',
+    grams: '7-9g',
+    proportions: '30ml espresso + 20ml ron + 30ml crema batida + pizca de canela + ralladura de chocolate',
+    preparation: 'Mezcla el espresso con ron → añade crema batida encima → espolvorea canela y ralladura de chocolate',
+    proTip: 'Sirve con un bastoncillo de canela como decoración y para remover',
+    isHot: true,
+    hasAlcohol: true
+  },
+  {
+    id: 'cremaet',
+    title: 'Cremaet',
+    emoji: '☕️🥃🔥',
+    ingredients: 'Espresso + Brandy + Azúcar + Canela + Cáscara de limón + Granos de café',
+    grams: '7-9g',
+    proportions: '30ml espresso + 20ml brandy + 1 cucharada de azúcar + 1 rama de canela + cáscara de 1/4 limón + 3 granos de café',
+    preparation: 'Calienta el brandy con azúcar, canela, cáscara de limón y granos → flamea hasta caramelizar → añade el espresso caliente',
+    proTip: 'Tradicional de Valencia, sirve con una pequeña cuchara para disfrutar del azúcar caramelizado',
+    isHot: true,
+    hasAlcohol: true
+  },
+  {
+    id: 'cafe-escoces',
+    title: 'Café Escocés',
+    emoji: '☕️🥃🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+    ingredients: 'Café espresso + Whisky escocés + Nata montada + Cacao en polvo',
+    grams: '7-9g',
+    proportions: '30ml espresso + 30ml whisky escocés + 30ml nata montada + pizca de cacao en polvo',
+    preparation: 'Mezcla el espresso con el whisky → corona con nata montada → espolvorea cacao en polvo',
+    proTip: 'Usa un whisky ahumado para resaltar las notas del café',
+    isHot: true,
+    hasAlcohol: true
+  },
+  {
+    id: 'iced-coffee-latte',
+    title: 'Iced Coffee Latte',
+    emoji: '☕️🥛❄️',
+    ingredients: 'Café espresso + Leche fría + Hielo + Sirope (opcional)',
+    grams: '14-18g (doble espresso)',
+    proportions: '60ml espresso + 120ml leche fría + hielo abundante + 15ml sirope (opcional)',
+    preparation: 'Prepara el espresso y deja enfriar → llena un vaso con hielo → añade la leche fría → vierte el espresso → añade sirope al gusto',
+    proTip: 'Para un sabor más intenso, congela el café en cubitos y úsalos en lugar del hielo normal',
+    isHot: false
+  },
+  {
+    id: 'cafe-goloso',
+    title: 'Café Goloso',
+    emoji: '☕️🍮🍯',
+    ingredients: 'Café espresso + Leche condensada + Nata montada + Chocolate rallado',
+    grams: '7-9g',
+    proportions: '30ml espresso + 30ml leche condensada + 30ml nata montada + chocolate rallado para decorar',
+    preparation: 'Vierte la leche condensada en el fondo de la taza → añade el espresso → corona con nata montada → decora con chocolate rallado',
+    proTip: 'Sirve con una galleta para acompañar y balancear el dulzor',
+    isHot: true
+  },
+  {
+    id: 'batido-cafe',
+    title: 'Batido de Café',
+    emoji: '☕️🍦🥤',
+    ingredients: 'Café espresso frío + Helado de vainilla + Leche fría + Nata montada',
+    grams: '14-18g (doble espresso)',
+    proportions: '60ml espresso frío + 2 bolas de helado de vainilla + 120ml leche fría + nata montada para decorar',
+    preparation: 'Prepara el espresso y deja enfriar → mezcla en una batidora con el helado y la leche → sirve en vaso alto → decora con nata montada',
+    proTip: 'Añade una cucharadita de cacao en polvo a la mezcla para un toque extra de sabor',
+    isHot: false
+  },
+  {
+    id: 'cafe-aperitivo',
+    title: 'Café Aperitivo',
+    emoji: '☕️🍸🍊',
+    ingredients: 'Café espresso + Vermut rojo + Twist de naranja + Hielo',
+    grams: '7-9g',
+    proportions: '30ml espresso + 60ml vermut rojo + cáscara de naranja + hielo',
+    preparation: 'Prepara el espresso y deja enfriar → añade hielo a un vaso bajo → vierte el vermut → añade el espresso frío → aromatiza con la cáscara de naranja',
+    proTip: 'Sirve con una aceituna verde para un contraste salado-amargo interesante',
+    isHot: false,
+    hasAlcohol: true
   }
 ];
 
 function App() {
   const [activeRecipe, setActiveRecipe] = useState<string | null>(null);
   const [temperatureFilter, setTemperatureFilter] = useState<'all' | 'hot' | 'cold'>('all');
+  const [alcoholFilter, setAlcoholFilter] = useState<'all' | 'with' | 'without'>('all');
 
   const toggleRecipe = (recipeId: string) => {
     setActiveRecipe(activeRecipe === recipeId ? null : recipeId);
   };
 
   const filteredRecipes = recipes.filter(recipe => {
-    if (temperatureFilter === 'all') return true;
-    return temperatureFilter === 'hot' ? recipe.isHot : !recipe.isHot;
+    if (temperatureFilter !== 'all' && 
+        ((temperatureFilter === 'hot' && !recipe.isHot) || 
+         (temperatureFilter === 'cold' && recipe.isHot))) {
+      return false;
+    }
+    
+    if (alcoholFilter !== 'all' && 
+        ((alcoholFilter === 'with' && !recipe.hasAlcohol) || 
+         (alcoholFilter === 'without' && recipe.hasAlcohol))) {
+      return false;
+    }
+    
+    return true;
   });
 
   return (
@@ -225,10 +365,10 @@ function App() {
           ☕ Recetario de Café
         </h1>
 
-        <div className="flex justify-center mb-8 space-x-4">
+        <div className="flex flex-wrap justify-center mb-4 space-x-4">
           <button
             onClick={() => setTemperatureFilter('all')}
-            className={`px-6 py-2 rounded-full transition-all duration-300 ${
+            className={`px-6 py-2 rounded-full transition-all duration-300 mb-2 ${
               temperatureFilter === 'all'
                 ? 'bg-[#7b4e3d] text-white'
                 : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
@@ -238,7 +378,7 @@ function App() {
           </button>
           <button
             onClick={() => setTemperatureFilter('hot')}
-            className={`px-6 py-2 rounded-full transition-all duration-300 flex items-center space-x-2 ${
+            className={`px-6 py-2 rounded-full transition-all duration-300 flex items-center space-x-2 mb-2 ${
               temperatureFilter === 'hot'
                 ? 'bg-[#7b4e3d] text-white'
                 : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
@@ -249,7 +389,7 @@ function App() {
           </button>
           <button
             onClick={() => setTemperatureFilter('cold')}
-            className={`px-6 py-2 rounded-full transition-all duration-300 flex items-center space-x-2 ${
+            className={`px-6 py-2 rounded-full transition-all duration-300 flex items-center space-x-2 mb-2 ${
               temperatureFilter === 'cold'
                 ? 'bg-[#7b4e3d] text-white'
                 : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
@@ -257,6 +397,41 @@ function App() {
           >
             <span>Fríos</span>
             <span>❄️</span>
+          </button>
+        </div>
+        
+        <div className="flex flex-wrap justify-center mb-8 space-x-4">
+          <button
+            onClick={() => setAlcoholFilter('all')}
+            className={`px-6 py-2 rounded-full transition-all duration-300 mb-2 ${
+              alcoholFilter === 'all'
+                ? 'bg-[#7b4e3d] text-white'
+                : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
+            }`}
+          >
+            Con/Sin Alcohol
+          </button>
+          <button
+            onClick={() => setAlcoholFilter('with')}
+            className={`px-6 py-2 rounded-full transition-all duration-300 flex items-center space-x-2 mb-2 ${
+              alcoholFilter === 'with'
+                ? 'bg-[#7b4e3d] text-white'
+                : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
+            }`}
+          >
+            <span>Con Alcohol</span> 
+            <span>🍸</span>
+          </button>
+          <button
+            onClick={() => setAlcoholFilter('without')}
+            className={`px-6 py-2 rounded-full transition-all duration-300 flex items-center space-x-2 mb-2 ${
+              alcoholFilter === 'without'
+                ? 'bg-[#7b4e3d] text-white'
+                : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
+            }`}
+          >
+            <span>Sin Alcohol</span>
+            <span>🍵</span>
           </button>
         </div>
         
