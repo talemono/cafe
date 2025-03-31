@@ -14,13 +14,18 @@
       "coffeeGrams": "Gramas de café",
       "proportions": "Proporções",
       "preparation": "Preparação",
-      "proTip": "Dica Pro"
+      "proTip": "Dica Profissional"
+    },
+    "viewMode": {
+      "list": "Visualização em lista",
+      "grid": "Visualização em grade"
     },
     "language": {
       "en": "Inglês",
       "es": "Espanhol",
       "pt": "Português",
       "ko": "Coreano",
+      "fr": "Francês",
       "languageSelector": "Selecionar idioma"
     }
   }

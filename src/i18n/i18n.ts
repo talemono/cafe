@@ -7,12 +7,14 @@ import translationEN from './locales/en.json';
 import translationES from './locales/es.json';
 import translationPT from './locales/pt.json';
 import translationKO from './locales/ko.json';
+import translationFR from './locales/fr.json';
 
 // Importamos las traducciones de recetas
 import recipesEN from './locales/recipes/en.json';
 import recipesES from './locales/recipes/es.json';
 import recipesPT from './locales/recipes/pt.json';
 import recipesKO from './locales/recipes/ko.json';
+import recipesFR from './locales/recipes/fr.json';
 
 // Recursos para i18next
 const resources = {
@@ -31,6 +33,10 @@ const resources = {
   ko: {
     translation: translationKO.translation,
     recipes: recipesKO
+  },
+  fr: {
+    translation: translationFR.translation,
+    recipes: recipesFR
   }
 };
 

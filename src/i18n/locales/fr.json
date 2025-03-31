@@ -1,0 +1,28 @@
+{
+  "translation": {
+    "title": "Livre de Recettes de Café",
+    "filters": {
+      "all": "Tous",
+      "hot": "Chauds",
+      "cold": "Froids",
+      "withAlcohol": "Avec Alcool",
+      "withoutAlcohol": "Sans Alcool",
+      "allAlcohol": "Avec/Sans Alcool"
+    },
+    "recipe": {
+      "ingredients": "Ingrédients",
+      "coffeeGrams": "Grammes de café",
+      "proportions": "Proportions",
+      "preparation": "Préparation",
+      "proTip": "Conseil Pro"
+    },
+    "language": {
+      "en": "Anglais",
+      "es": "Espagnol",
+      "pt": "Portugais",
+      "ko": "Coréen",
+      "fr": "Français",
+      "languageSelector": "Sélectionner la langue"
+    }
+  }
+} 

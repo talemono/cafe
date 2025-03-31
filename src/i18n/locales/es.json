@@ -16,11 +16,16 @@
       "preparation": "Preparación",
       "proTip": "Pro Tip"
     },
+    "viewMode": {
+      "list": "Vista de lista",
+      "grid": "Vista de cuadrícula"
+    },
     "language": {
       "en": "Inglés",
       "es": "Español",
       "pt": "Portugués",
       "ko": "Coreano",
+      "fr": "Francés",
       "languageSelector": "Seleccionar idioma"
     }
   }

@@ -16,11 +16,16 @@
       "preparation": "Preparation",
       "proTip": "Pro Tip"
     },
+    "viewMode": {
+      "list": "List view",
+      "grid": "Grid view"
+    },
     "language": {
       "en": "English",
       "es": "Spanish",
       "pt": "Portuguese",
       "ko": "Korean",
+      "fr": "French",
       "languageSelector": "Select language"
     }
   }

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import data from '@emoji-mart/data';
 import Picker from '@emoji-mart/react';
-import { Thermometer } from 'lucide-react';
+import { Thermometer, Grid, List } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './components/LanguageSelector';
 
@@ -335,11 +335,93 @@ const recipes: Recipe[] = [
   }
 ];
 
+// Componente de tarjeta memoizado para optimizar el rendimiento
+const RecipeCard = memo(({ 
+  recipe, 
+  activeRecipe, 
+  toggleRecipe, 
+  getRecipeTranslation, 
+  viewMode,
+  t 
+}: { 
+  recipe: Recipe; 
+  activeRecipe: string | null; 
+  toggleRecipe: (id: string) => void; 
+  getRecipeTranslation: (id: string, prop: string) => string | null;
+  viewMode: 'grid' | 'list';
+  t: any;
+}) => {
+  return (
+    <div
+      key={recipe.id}
+      className={`bg-[#fff8f0] rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer transform ${
+        viewMode === 'grid' 
+          ? 'hover:scale-[1.02] p-2 sm:p-3'
+          : 'hover:scale-105 p-4 sm:p-6'
+      }`}
+      onClick={() => toggleRecipe(recipe.id)}
+    >
+      <div className="w-full">
+        <div className={`flex items-center justify-center ${
+          viewMode === 'grid' 
+            ? 'mb-1 text-xl xs:text-2xl sm:text-3xl' 
+            : 'mb-4 text-4xl'
+        }`}>
+          {recipe.emoji}
+        </div>
+        <h2 className={`font-semibold text-[#7b4e3d] text-center ${
+          viewMode === 'grid' 
+            ? 'text-xs xs:text-sm sm:text-base mb-1'
+            : 'text-xl mb-4'
+        }`}>
+          {getRecipeTranslation(recipe.id, 'title') || recipe.title}
+        </h2>
+        
+        <div
+          className={`transition-all duration-300 overflow-hidden ${
+            activeRecipe === recipe.id ? 'max-h-[800px]' : 'max-h-0'
+          }`}
+        >
+          <div className={`space-y-1 sm:space-y-2 text-[#5a3e36] ${
+            viewMode === 'grid' ? 'text-[10px] xs:text-xs sm:text-sm' : 'text-sm sm:text-base'
+          }`}>
+            <p><strong>{t('recipe.ingredients')}:</strong> {getRecipeTranslation(recipe.id, 'ingredients') || recipe.ingredients}</p>
+            <p><strong>{t('recipe.coffeeGrams')}:</strong> {getRecipeTranslation(recipe.id, 'grams') || recipe.grams}</p>
+            <p><strong>{t('recipe.proportions')}:</strong> {getRecipeTranslation(recipe.id, 'proportions') || recipe.proportions}</p>
+            <p><strong>{t('recipe.preparation')}:</strong> {getRecipeTranslation(recipe.id, 'preparation') || recipe.preparation}</p>
+            <p className="italic"><strong>{t('recipe.proTip')}:</strong> {getRecipeTranslation(recipe.id, 'proTip') || recipe.proTip}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+});
+
 function App() {
   const { t, i18n } = useTranslation();
   const [activeRecipe, setActiveRecipe] = useState<string | null>(null);
   const [temperatureFilter, setTemperatureFilter] = useState<'all' | 'hot' | 'cold'>('all');
   const [alcoholFilter, setAlcoholFilter] = useState<'all' | 'with' | 'without'>('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+
+  useEffect(() => {
+    // Cargar la preferencia del usuario del localStorage al montar el componente
+    const savedViewMode = localStorage.getItem('viewMode');
+    if (savedViewMode === 'grid' || savedViewMode === 'list') {
+      setViewMode(savedViewMode);
+    }
+  }, []);
+
+  // Función para cambiar el modo de visualización
+  const toggleViewMode = () => {
+    const newMode = viewMode === 'grid' ? 'list' : 'grid';
+    setViewMode(newMode);
+    // Guardar la preferencia en localStorage
+    localStorage.setItem('viewMode', newMode);
+    
+    // Cerrar cualquier receta abierta al cambiar el modo de visualización
+    setActiveRecipe(null);
+  };
 
   const toggleRecipe = (recipeId: string) => {
     setActiveRecipe(activeRecipe === recipeId ? null : recipeId);
@@ -405,7 +487,21 @@ function App() {
           <h1 className="text-4xl font-bold text-center text-[#5a3e36]">
             ☕ {t('title')}
           </h1>
-          <LanguageSelector />
+          <div className="flex items-center space-x-4">
+            <button 
+              onClick={toggleViewMode} 
+              className="px-3 py-2 bg-[#7b4e3d] text-white rounded-md flex items-center transition-all duration-300 hover:bg-[#5a3e36]"
+              aria-label={viewMode === 'list' ? t('viewMode.grid') : t('viewMode.list')}
+              title={viewMode === 'list' ? t('viewMode.grid') : t('viewMode.list')}
+            >
+              {viewMode === 'list' ? (
+                <Grid className="w-5 h-5" />
+              ) : (
+                <List className="w-5 h-5" />
+              )}
+            </button>
+            <LanguageSelector />
+          </div>
         </div>
 
         <div className="flex flex-wrap justify-center mb-4 space-x-4">
@@ -478,36 +574,21 @@ function App() {
           </button>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className={`transition-all duration-500 transform ${
+          viewMode === 'list' 
+            ? 'grid grid-cols-1 gap-6' 
+            : 'grid grid-cols-3 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 w-full'
+        }`}>
           {filteredRecipes.map((recipe) => (
-            <div
+            <RecipeCard
               key={recipe.id}
-              className="bg-[#fff8f0] rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer transform hover:scale-105"
-              onClick={() => toggleRecipe(recipe.id)}
-            >
-              <div className="p-6">
-                <div className="flex items-center justify-center mb-4 text-4xl">
-                  {recipe.emoji}
-                </div>
-                <h2 className="text-xl font-semibold text-[#7b4e3d] text-center mb-4">
-                  {getRecipeTranslation(recipe.id, 'title') || recipe.title}
-                </h2>
-                
-                <div
-                  className={`transition-all duration-300 overflow-hidden ${
-                    activeRecipe === recipe.id ? 'max-h-96' : 'max-h-0'
-                  }`}
-                >
-                  <div className="space-y-3 text-[#5a3e36]">
-                    <p><strong>{t('recipe.ingredients')}:</strong> {getRecipeTranslation(recipe.id, 'ingredients') || recipe.ingredients}</p>
-                    <p><strong>{t('recipe.coffeeGrams')}:</strong> {getRecipeTranslation(recipe.id, 'grams') || recipe.grams}</p>
-                    <p><strong>{t('recipe.proportions')}:</strong> {getRecipeTranslation(recipe.id, 'proportions') || recipe.proportions}</p>
-                    <p><strong>{t('recipe.preparation')}:</strong> {getRecipeTranslation(recipe.id, 'preparation') || recipe.preparation}</p>
-                    <p className="italic"><strong>{t('recipe.proTip')}:</strong> {getRecipeTranslation(recipe.id, 'proTip') || recipe.proTip}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+              recipe={recipe}
+              activeRecipe={activeRecipe}
+              toggleRecipe={toggleRecipe}
+              getRecipeTranslation={getRecipeTranslation}
+              viewMode={viewMode}
+              t={t}
+            />
           ))}
         </div>
       </div>

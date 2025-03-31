@@ -58,6 +58,7 @@ The application automatically detects the browser's language and provides a welc
 * 🇺🇸 English
 * 🇧🇷 Português (Portuguese)
 * 🇰🇷 한국어 (Korean)
+* 🇫🇷 Français (French)
 
 ## Usage
 
@@ -86,4 +87,4 @@ If you'd like to contribute to this project and share your passion for coffee, p
 * Flag icons provided by [flagcdn.com](https://flagcdn.com)
 * Inspired by professional baristas and coffee lovers seeking to create moments of warmth and happiness.
 
-With Café App, every cup of coffee becomes a special moment. Download it now and start enjoying the warmth of coffee in your home!
+With Cafe, every cup of coffee becomes a special moment. ✨✨

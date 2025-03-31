@@ -4,9 +4,10 @@ import { useTranslation } from 'react-i18next';
 // URLs de imágenes de banderas para cada idioma
 const flags: Record<string, string> = {
   en: 'https://flagcdn.com/w40/us.png',
-  es: 'https://flagcdn.com/w40/es.png',
+  es: 'https://flagcdn.com/w40/ar.png',
   pt: 'https://flagcdn.com/w40/br.png',
-  ko: 'https://flagcdn.com/w40/kr.png'
+  ko: 'https://flagcdn.com/w40/kr.png',
+  fr: 'https://flagcdn.com/w40/fr.png'
 };
 
 const LanguageSelector: React.FC = () => {
@@ -25,7 +26,8 @@ const LanguageSelector: React.FC = () => {
     { code: 'en', name: t('language.en') },
     { code: 'es', name: t('language.es') },
     { code: 'pt', name: t('language.pt') },
-    { code: 'ko', name: t('language.ko') }
+    { code: 'ko', name: t('language.ko') },
+    { code: 'fr', name: t('language.fr') }
   ];
 
   // Cambiar idioma
