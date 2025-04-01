@@ -1,7 +1,5 @@
-import React, { useState, useEffect, memo } from 'react';
-import data from '@emoji-mart/data';
-import Picker from '@emoji-mart/react';
-import { Thermometer, Grid, List } from 'lucide-react';
+import { useState, useEffect, memo } from 'react';
+import { Grid, List } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './components/LanguageSelector';
 
@@ -342,6 +340,7 @@ const RecipeCard = memo(({
   toggleRecipe, 
   getRecipeTranslation, 
   viewMode,
+  isActive,
   t 
 }: { 
   recipe: Recipe; 
@@ -349,41 +348,53 @@ const RecipeCard = memo(({
   toggleRecipe: (id: string) => void; 
   getRecipeTranslation: (id: string, prop: string) => string | null;
   viewMode: 'grid' | 'list';
+  isActive: boolean;
   t: any;
 }) => {
+  // Determinar si la tarjeta está expandida en modo grilla
+  const isGridExpanded = isActive && viewMode === 'grid';
+
   return (
     <div
       key={recipe.id}
       className={`bg-[#fff8f0] rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer transform ${
-        viewMode === 'grid' 
-          ? 'hover:scale-[1.02] p-2 sm:p-3'
-          : 'hover:scale-105 p-4 sm:p-6'
+        isGridExpanded 
+          ? 'col-span-2 row-span-2 scale-105 z-10 relative p-4 sm:p-6'
+          : viewMode === 'grid' 
+            ? 'hover:scale-[1.02] p-2 sm:p-3'
+            : 'hover:scale-105 p-4 sm:p-6'
       }`}
       onClick={() => toggleRecipe(recipe.id)}
     >
       <div className="w-full">
         <div className={`flex items-center justify-center ${
-          viewMode === 'grid' 
-            ? 'mb-1 text-xl xs:text-2xl sm:text-3xl' 
-            : 'mb-4 text-4xl'
+          isGridExpanded
+            ? 'mb-4 text-4xl'
+            : viewMode === 'grid' 
+              ? 'mb-1 text-xl xs:text-2xl sm:text-3xl' 
+              : 'mb-4 text-4xl'
         }`}>
           {recipe.emoji}
         </div>
         <h2 className={`font-semibold text-[#7b4e3d] text-center ${
-          viewMode === 'grid' 
-            ? 'text-xs xs:text-sm sm:text-base mb-1'
-            : 'text-xl mb-4'
+          isGridExpanded
+            ? 'text-xl mb-4'
+            : viewMode === 'grid' 
+              ? 'text-xs xs:text-sm sm:text-base mb-1'
+              : 'text-xl mb-4'
         }`}>
           {getRecipeTranslation(recipe.id, 'title') || recipe.title}
         </h2>
         
         <div
           className={`transition-all duration-300 overflow-hidden ${
-            activeRecipe === recipe.id ? 'max-h-[800px]' : 'max-h-0'
+            isActive ? 'max-h-[800px]' : 'max-h-0'
           }`}
         >
           <div className={`space-y-1 sm:space-y-2 text-[#5a3e36] ${
-            viewMode === 'grid' ? 'text-[10px] xs:text-xs sm:text-sm' : 'text-sm sm:text-base'
+            isGridExpanded
+              ? 'text-sm sm:text-base'
+              : viewMode === 'grid' ? 'text-[10px] xs:text-xs sm:text-sm' : 'text-sm sm:text-base'
           }`}>
             <p><strong>{t('recipe.ingredients')}:</strong> {getRecipeTranslation(recipe.id, 'ingredients') || recipe.ingredients}</p>
             <p><strong>{t('recipe.coffeeGrams')}:</strong> {getRecipeTranslation(recipe.id, 'grams') || recipe.grams}</p>
@@ -577,7 +588,7 @@ function App() {
         <div className={`transition-all duration-500 transform ${
           viewMode === 'list' 
             ? 'grid grid-cols-1 gap-6' 
-            : 'grid grid-cols-3 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 w-full'
+            : 'grid grid-cols-3 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 w-full grid-auto-rows-min'
         }`}>
           {filteredRecipes.map((recipe) => (
             <RecipeCard
@@ -587,6 +598,7 @@ function App() {
               toggleRecipe={toggleRecipe}
               getRecipeTranslation={getRecipeTranslation}
               viewMode={viewMode}
+              isActive={activeRecipe === recipe.id}
               t={t}
             />
           ))}
