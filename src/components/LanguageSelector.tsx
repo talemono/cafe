@@ -10,6 +10,15 @@ const flags: Record<string, string> = {
   fr: 'https://flagcdn.com/w40/fr.png'
 };
 
+// Nombres nativos de cada idioma
+const nativeNames: Record<string, string> = {
+  en: 'English',
+  es: 'Español',
+  pt: 'Português',
+  ko: '한국어',
+  fr: 'Français'
+};
+
 const LanguageSelector: React.FC = () => {
   const { i18n, t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
@@ -21,13 +30,13 @@ const LanguageSelector: React.FC = () => {
     setCurrentLang(i18n.language);
   }, [i18n.language]);
 
-  // Mapeo de códigos de idioma a nombres para mostrar
+  // Lista de idiomas disponibles
   const languages = [
-    { code: 'en', name: t('language.en') },
-    { code: 'es', name: t('language.es') },
-    { code: 'pt', name: t('language.pt') },
-    { code: 'ko', name: t('language.ko') },
-    { code: 'fr', name: t('language.fr') }
+    { code: 'en', name: nativeNames.en },
+    { code: 'es', name: nativeNames.es },
+    { code: 'pt', name: nativeNames.pt },
+    { code: 'ko', name: nativeNames.ko },
+    { code: 'fr', name: nativeNames.fr }
   ];
 
   // Cambiar idioma
@@ -63,18 +72,19 @@ const LanguageSelector: React.FC = () => {
     <div ref={dropdownRef} className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="px-4 py-2 bg-white text-[#7b4e3d] rounded-full flex items-center space-x-2 hover:bg-[#f0e8d9] transition-all duration-300"
+        className="w-[44px] h-[44px] sm:w-auto sm:h-auto sm:px-4 py-2 bg-white text-[#7b4e3d] rounded-full flex items-center justify-center sm:justify-start hover:bg-[#f0e8d9] transition-all duration-300 sm:max-w-[120px] overflow-hidden"
       >
+        <span className="sm:hidden text-xl">🌐</span>
         <img 
           src={flags[currentLang] || flags.es} 
           alt={currentLang}
-          className="w-6 h-4 object-cover"
+          className="w-6 h-4 object-cover flex-shrink-0 hidden sm:block"
         />
-        <span className="ml-2">{displayLanguage.name}</span>
+        <span className="ml-2 truncate hidden sm:inline">{displayLanguage.name}</span>
       </button>
 
       {isOpen && (
-        <div className="absolute mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10">
+        <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10">
           <div className="py-1">
             {languages.map((language) => (
               <button
