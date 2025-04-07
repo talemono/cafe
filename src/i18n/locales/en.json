@@ -27,6 +27,13 @@
       "ko": "Korean",
       "fr": "French",
       "languageSelector": "Select language"
+    },
+    "footer": {
+      "github": "GitHub",
+      "twitter": "X (Twitter)",
+      "donate": "Buy me a coffee",
+      "copyright": "Made with love.",
+      "contact": "Contact"
     }
   }
 } 

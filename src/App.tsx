@@ -2,6 +2,7 @@ import { useState, useEffect, memo } from 'react';
 import { Grid, List } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './components/LanguageSelector';
+import Footer from './components/Footer';
 
 interface Recipe {
   id: string;
@@ -604,6 +605,7 @@ function App() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

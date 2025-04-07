@@ -27,6 +27,13 @@
       "ko": "Coreano",
       "fr": "Francés",
       "languageSelector": "Seleccionar idioma"
+    },
+    "footer": {
+      "github": "GitHub",
+      "twitter": "X (Twitter)",
+      "donate": "Comprame un café",
+      "copyright": "Hecho con amor.",
+      "contact": "Contacto"
     }
   }
 } 
