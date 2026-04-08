@@ -20,15 +20,10 @@ const nativeNames: Record<string, string> = {
 };
 
 const LanguageSelector: React.FC = () => {
-  const { i18n, t } = useTranslation();
+  const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState(i18n.language);
   const dropdownRef = useRef<HTMLDivElement>(null);
-
-  // Actualizar el idioma actual cuando cambie
-  useEffect(() => {
-    setCurrentLang(i18n.language);
-  }, [i18n.language]);
+  const currentLang = i18n.language;
 
   // Lista de idiomas disponibles
   const languages = [
@@ -45,7 +40,6 @@ const LanguageSelector: React.FC = () => {
       .then(() => {
         // Guardar el idioma en localStorage manualmente para asegurar que se guarda
         localStorage.setItem('cafeAppLanguage', lng);
-        setCurrentLang(lng);
         setIsOpen(false);
       })
       .catch(err => console.error("Error al cambiar idioma:", err));

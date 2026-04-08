@@ -1,4 +1,5 @@
-import { useState, useEffect, memo } from 'react';
+import { useState, memo } from 'react';
+import type { TFunction } from 'i18next';
 import { Grid, List } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './components/LanguageSelector';
@@ -16,6 +17,11 @@ interface Recipe {
   isHot: boolean;
   hasAlcohol?: boolean;
 }
+
+type RecipeTranslationKey = keyof Pick<
+  Recipe,
+  'title' | 'ingredients' | 'grams' | 'proportions' | 'preparation' | 'proTip'
+>;
 
 const recipes: Recipe[] = [
   {
@@ -337,7 +343,6 @@ const recipes: Recipe[] = [
 // Componente de tarjeta memoizado para optimizar el rendimiento
 const RecipeCard = memo(({ 
   recipe, 
-  activeRecipe, 
   toggleRecipe, 
   getRecipeTranslation, 
   viewMode,
@@ -345,12 +350,11 @@ const RecipeCard = memo(({
   t 
 }: { 
   recipe: Recipe; 
-  activeRecipe: string | null; 
   toggleRecipe: (id: string) => void; 
-  getRecipeTranslation: (id: string, prop: string) => string | null;
+  getRecipeTranslation: (id: string, prop: RecipeTranslationKey) => string | null;
   viewMode: 'grid' | 'list';
   isActive: boolean;
-  t: any;
+  t: TFunction;
 }) => {
   // Determinar si la tarjeta está expandida en modo grilla
   const isGridExpanded = isActive && viewMode === 'grid';
@@ -414,15 +418,10 @@ function App() {
   const [activeRecipe, setActiveRecipe] = useState<string | null>(null);
   const [temperatureFilter, setTemperatureFilter] = useState<'all' | 'hot' | 'cold'>('all');
   const [alcoholFilter, setAlcoholFilter] = useState<'all' | 'with' | 'without'>('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-
-  useEffect(() => {
-    // Cargar la preferencia del usuario del localStorage al montar el componente
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>(() => {
     const savedViewMode = localStorage.getItem('viewMode');
-    if (savedViewMode === 'grid' || savedViewMode === 'list') {
-      setViewMode(savedViewMode);
-    }
-  }, []);
+    return savedViewMode === 'grid' || savedViewMode === 'list' ? savedViewMode : 'grid';
+  });
 
   // Función para cambiar el modo de visualización
   const toggleViewMode = () => {
@@ -456,7 +455,7 @@ function App() {
   });
 
   // Función para obtener la traducción de una propiedad de receta
-  const getRecipeTranslation = (recipeId: string, property: string) => {
+  const getRecipeTranslation = (recipeId: string, property: RecipeTranslationKey) => {
     // Intentamos obtener la traducción, si no existe usamos el valor original
     try {
       // Obtenemos el texto traducido del namespace 'recipes'
@@ -473,8 +472,9 @@ function App() {
       }
       
       // Si no hay traducción, buscamos la receta original por ID
-      const originalRecipe = recipes.find(r => r.id === recipeId);
+      const originalRecipe = recipes.find((recipe) => recipe.id === recipeId);
       if (originalRecipe) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore - accedemos dinámicamente a la propiedad
         return originalRecipe[property];
       }
@@ -483,8 +483,9 @@ function App() {
     } catch (error) {
       console.error('Error al obtener traducción:', error);
       // En caso de error, intentamos devolver el valor original
-      const originalRecipe = recipes.find(r => r.id === recipeId);
+      const originalRecipe = recipes.find((recipe) => recipe.id === recipeId);
       if (originalRecipe) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore - accedemos dinámicamente a la propiedad
         return originalRecipe[property];
       }
@@ -595,7 +596,6 @@ function App() {
             <RecipeCard
               key={recipe.id}
               recipe={recipe}
-              activeRecipe={activeRecipe}
               toggleRecipe={toggleRecipe}
               getRecipeTranslation={getRecipeTranslation}
               viewMode={viewMode}
