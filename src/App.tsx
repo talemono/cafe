@@ -2,14 +2,12 @@ import { useCallback, useState } from 'react';
 import { Grid, List } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import RecipeCard from './components/RecipeCard';
+import RecipeFilters from './components/RecipeFilters';
 import LanguageSelector from './components/LanguageSelector';
 import Footer from './components/Footer';
 import { recipes } from './data/recipes';
 import type { RecipeId } from './data/recipes';
-import type { RecipeTextKey, ViewMode } from './types/recipe';
-
-type TemperatureFilter = 'all' | 'hot' | 'cold';
-type AlcoholFilter = 'all' | 'with' | 'without';
+import type { AlcoholFilter, RecipeTextKey, TemperatureFilter, ViewMode } from './types/recipe';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -86,75 +84,13 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center mb-4 space-x-4">
-          <button
-            onClick={() => setTemperatureFilter('all')}
-            className={`px-6 py-2 rounded-full transition-all duration-300 mb-2 ${
-              temperatureFilter === 'all'
-                ? 'bg-[#7b4e3d] text-white'
-                : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
-            }`}
-          >
-            {t('filters.all')}
-          </button>
-          <button
-            onClick={() => setTemperatureFilter('hot')}
-            className={`px-6 py-2 rounded-full transition-all duration-300 flex items-center space-x-2 mb-2 ${
-              temperatureFilter === 'hot'
-                ? 'bg-[#7b4e3d] text-white'
-                : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
-            }`}
-          >
-            <span>{t('filters.hot')}</span>
-            <span>🔥</span>
-          </button>
-          <button
-            onClick={() => setTemperatureFilter('cold')}
-            className={`px-6 py-2 rounded-full transition-all duration-300 flex items-center space-x-2 mb-2 ${
-              temperatureFilter === 'cold'
-                ? 'bg-[#7b4e3d] text-white'
-                : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
-            }`}
-          >
-            <span>{t('filters.cold')}</span>
-            <span>❄️</span>
-          </button>
-        </div>
-
-        <div className="flex flex-wrap justify-center mb-8 space-x-4">
-          <button
-            onClick={() => setAlcoholFilter('all')}
-            className={`px-6 py-2 rounded-full transition-all duration-300 mb-2 ${
-              alcoholFilter === 'all'
-                ? 'bg-[#7b4e3d] text-white'
-                : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
-            }`}
-          >
-            {t('filters.allAlcohol')}
-          </button>
-          <button
-            onClick={() => setAlcoholFilter('with')}
-            className={`px-6 py-2 rounded-full transition-all duration-300 flex items-center space-x-2 mb-2 ${
-              alcoholFilter === 'with'
-                ? 'bg-[#7b4e3d] text-white'
-                : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
-            }`}
-          >
-            <span>{t('filters.withAlcohol')}</span>
-            <span>🍸</span>
-          </button>
-          <button
-            onClick={() => setAlcoholFilter('without')}
-            className={`px-6 py-2 rounded-full transition-all duration-300 flex items-center space-x-2 mb-2 ${
-              alcoholFilter === 'without'
-                ? 'bg-[#7b4e3d] text-white'
-                : 'bg-white text-[#7b4e3d] hover:bg-[#7b4e3d] hover:text-white'
-            }`}
-          >
-            <span>{t('filters.withoutAlcohol')}</span>
-            <span>🍵</span>
-          </button>
-        </div>
+        <RecipeFilters
+          temperatureFilter={temperatureFilter}
+          alcoholFilter={alcoholFilter}
+          onTemperatureChange={setTemperatureFilter}
+          onAlcoholChange={setAlcoholFilter}
+          t={t}
+        />
 
         <div className={`transition-all duration-500 transform ${
           viewMode === 'list'
