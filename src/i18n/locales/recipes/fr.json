@@ -262,5 +262,45 @@
     "proportions": "30ml d'espresso + 60ml de vermouth rouge + zeste d'orange + glace",
     "preparation": "Préparer l'espresso et laisser refroidir → ajouter de la glace dans un verre bas → verser le vermouth → ajouter l'espresso froid → aromatiser avec le zeste d'orange",
     "proTip": "Servir avec une olive verte pour un contraste salé-amer intéressant"
+  },
+  "cafe-con-leche": {
+    "title": "Café con Leche",
+    "ingredients": "Espresso + Lait chaud",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 120-150ml de lait",
+    "preparation": "Préparer l'espresso → ajouter du lait chaud (peu ou pas de mousse)",
+    "proTip": "Le classique du petit-déjeuner : plus de lait qu'un latte, moins mousseux"
+  },
+  "moka-pot": {
+    "title": "Café Moka",
+    "ingredients": "Café moulu moyen-fin + Eau",
+    "grams": "18-20g",
+    "proportions": "18-20g de café / ~120ml d'eau (cafetière 3 tasses)",
+    "preparation": "Remplir la base d'eau jusqu'à la valve → placer le café dans le filtre sans tasser → assembler la cafetière → chauffer à feu doux jusqu'à ce que le café monte",
+    "proTip": "Retirer du feu dès que le café a fini de monter pour éviter le goût brûlé"
+  },
+  "french-press": {
+    "title": "Presse Française",
+    "ingredients": "Café moulu grossier + Eau chaude",
+    "grams": "15g",
+    "proportions": "15g de café / 250ml d'eau (ratio 1:16)",
+    "preparation": "Ajouter le café → verser l'eau à 93-96°C → infuser 4 minutes → presser le piston lentement",
+    "proTip": "La mouture grossière est essentielle pour éviter les sédiments et la sur-extraction"
+  },
+  "filtrado-manual": {
+    "title": "Filtré Manuel",
+    "ingredients": "Café moulu moyen + Eau chaude",
+    "grams": "15g",
+    "proportions": "15g de café / 250ml d'eau (ratio 1:16)",
+    "preparation": "Mouiller le filtre → ajouter le café → pré-infusion 30s → verser l'eau en cercles lents → temps total 2:30-3:30 min",
+    "proTip": "V60, Chemex ou Kalita : le versement contrôlé définit la clarté du café"
+  },
+  "cortado-argentino": {
+    "title": "Cortado Argentin",
+    "ingredients": "Espresso + Lait moussé",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 30-40ml de lait moussé",
+    "preparation": "Préparer l'espresso → ajouter des parts égales de lait moussé → le classique des bars argentins",
+    "proTip": "En Argentine, commandez \"cortado\" dans n'importe quel bar : espresso coupé avec du lait, servi dans un petit verre ou une tasse"
   }
 }

@@ -57,11 +57,11 @@
   },
   "cortado": {
     "title": "Cortado",
-    "ingredients": "Espresso + Leche caliente",
+    "ingredients": "Espresso + Leche espumada",
     "grams": "7-9g",
-    "proportions": "1 shot espresso (30ml) + 30ml leche",
-    "preparation": "Espresso → leche caliente (sin espuma)",
-    "proTip": "Equilibra acidez del café con leche"
+    "proportions": "1 shot espresso (30ml) + 30-40ml leche con espuma",
+    "preparation": "Prepara espresso → agrega leche espumada en partes iguales → servido en vaso o taza chica",
+    "proTip": "Espresso cortado con leche, el clásico infaltable de cualquier cafetería"
   },
   "cold-brew": {
     "title": "Cold Brew",
@@ -222,5 +222,45 @@
     "proportions": "30ml espresso + 60ml vermut rojo + cáscara de naranja + hielo",
     "preparation": "Prepara el espresso y deja enfriar → añade hielo a un vaso bajo → vierte el vermut → añade el espresso frío → aromatiza con la cáscara de naranja",
     "proTip": "Sirve con una aceituna verde para un contraste salado-amargo interesante"
+  },
+  "cafe-con-leche": {
+    "title": "Café con Leche",
+    "ingredients": "Café espresso + Leche caliente",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 120-150ml leche",
+    "preparation": "Prepara espresso → añade leche caliente (poca o sin espuma)",
+    "proTip": "El clásico del desayuno: más leche que el latte, menos espumoso"
+  },
+  "moka-pot": {
+    "title": "Café de Moka",
+    "ingredients": "Café molido medio-fino + Agua",
+    "grams": "18-20g",
+    "proportions": "18-20g café / ~120ml agua (cafetera 3 tazas)",
+    "preparation": "Llena la base con agua hasta la válvula → coloca café en el filtro sin apretar → arma la cafetera → calienta a fuego bajo hasta que suba el café",
+    "proTip": "Retira del fuego apenas termine de subir para evitar sabor quemado"
+  },
+  "french-press": {
+    "title": "Prensa Francesa",
+    "ingredients": "Café molido grueso + Agua caliente",
+    "grams": "15g",
+    "proportions": "15g café / 250ml agua (ratio 1:16)",
+    "preparation": "Añade café → vierte agua a 93-96°C → reposa 4 minutos → presiona el émbolo lentamente",
+    "proTip": "Molienda gruesa es clave para evitar sedimentos y sobre-extracción"
+  },
+  "filtrado-manual": {
+    "title": "Filtrado Manual",
+    "ingredients": "Café molido medio + Agua caliente",
+    "grams": "15g",
+    "proportions": "15g café / 250ml agua (ratio 1:16)",
+    "preparation": "Moja el filtro → añade café → pre-infusión 30s → vierte agua en círculos lentos → tiempo total 2:30-3:30 min",
+    "proTip": "V60, Chemex o Kalita: el vertido controlado define la claridad del café"
+  },
+  "cortado-argentino": {
+    "title": "Cortado Argentino",
+    "ingredients": "Espresso + Leche espumada",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 30-40ml leche con espuma",
+    "preparation": "Prepara espresso → agrega leche espumada en partes iguales → el clásico de bar argentino",
+    "proTip": "En Argentina se pide \"cortado\" en cualquier bar: espresso manchado con leche, servido en vaso o taza chica"
   }
 } 

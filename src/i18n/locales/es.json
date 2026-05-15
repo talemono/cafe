@@ -9,6 +9,11 @@
       "withoutAlcohol": "Sin Alcohol",
       "allAlcohol": "Con/Sin Alcohol"
     },
+    "search": {
+      "label": "Buscar recetas",
+      "placeholder": "Buscar por título o ingredientes",
+      "noResults": "No se encontraron recetas"
+    },
     "recipe": {
       "ingredients": "Ingredientes",
       "coffeeGrams": "Gramos de café",

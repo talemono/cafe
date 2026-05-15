@@ -12,6 +12,7 @@ import type { AlcoholFilter, RecipeTextKey, TemperatureFilter, ViewMode } from '
 function App() {
   const { t, i18n } = useTranslation();
   const [activeRecipe, setActiveRecipe] = useState<RecipeId | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const [temperatureFilter, setTemperatureFilter] = useState<TemperatureFilter>('all');
   const [alcoholFilter, setAlcoholFilter] = useState<AlcoholFilter>('all');
   const [viewMode, setViewMode] = useState<ViewMode>(() => {
@@ -40,6 +41,8 @@ function App() {
     return typeof translatedText === 'string' ? translatedText : '';
   }, [i18n]);
 
+  const normalizedSearchQuery = searchQuery.trim().toLocaleLowerCase(i18n.language);
+
   const filteredRecipes = recipes.filter((recipe) => {
     if (
       temperatureFilter !== 'all' &&
@@ -55,6 +58,17 @@ function App() {
         (alcoholFilter === 'without' && recipe.hasAlcohol))
     ) {
       return false;
+    }
+
+    if (normalizedSearchQuery) {
+      const searchableText = [
+        getRecipeText(recipe.id, 'title'),
+        getRecipeText(recipe.id, 'ingredients'),
+      ].join(' ').toLocaleLowerCase(i18n.language);
+
+      if (!searchableText.includes(normalizedSearchQuery)) {
+        return false;
+      }
     }
 
     return true;
@@ -85,30 +99,38 @@ function App() {
         </div>
 
         <RecipeFilters
+          searchQuery={searchQuery}
           temperatureFilter={temperatureFilter}
           alcoholFilter={alcoholFilter}
+          onSearchChange={setSearchQuery}
           onTemperatureChange={setTemperatureFilter}
           onAlcoholChange={setAlcoholFilter}
           t={t}
         />
 
-        <div className={`transition-all duration-500 transform ${
-          viewMode === 'list'
-            ? 'grid grid-cols-1 gap-6'
-            : 'grid grid-cols-3 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 w-full grid-auto-rows-min'
-        }`}>
-          {filteredRecipes.map((recipe) => (
-            <RecipeCard
-              key={recipe.id}
-              recipe={recipe}
-              isActive={activeRecipe === recipe.id}
-              viewMode={viewMode}
-              onToggle={toggleRecipe}
-              getRecipeText={getRecipeText}
-              t={t}
-            />
-          ))}
-        </div>
+        {filteredRecipes.length > 0 ? (
+          <div className={`transition-all duration-500 transform ${
+            viewMode === 'list'
+              ? 'grid grid-cols-1 gap-6'
+              : 'grid grid-cols-3 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 w-full grid-auto-rows-min'
+          }`}>
+            {filteredRecipes.map((recipe) => (
+              <RecipeCard
+                key={recipe.id}
+                recipe={recipe}
+                isActive={activeRecipe === recipe.id}
+                viewMode={viewMode}
+                onToggle={toggleRecipe}
+                getRecipeText={getRecipeText}
+                t={t}
+              />
+            ))}
+          </div>
+        ) : (
+          <p className="py-12 text-center text-[#7b4e3d]">
+            {t('search.noResults')}
+          </p>
+        )}
       </div>
       <Footer />
     </div>

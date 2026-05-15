@@ -222,5 +222,45 @@
     "proportions": "30ml espresso + 60ml vermute tinto + casca de laranja + gelo",
     "preparation": "Prepare o espresso e deixe esfriar → adicione gelo a um copo baixo → despeje o vermute → adicione o espresso frio → aromatize com a casca de laranja",
     "proTip": "Sirva com uma azeitona verde para um contraste salgado-amargo interessante"
+  },
+  "cafe-con-leche": {
+    "title": "Café con Leche",
+    "ingredients": "Espresso + Leite quente",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 120-150ml leite",
+    "preparation": "Prepare espresso → adicione leite quente (pouca ou sem espuma)",
+    "proTip": "O clássico do café da manhã: mais leite que o latte, menos espumoso"
+  },
+  "moka-pot": {
+    "title": "Café Moka",
+    "ingredients": "Café moído médio-fino + Água",
+    "grams": "18-20g",
+    "proportions": "18-20g café / ~120ml água (cafeteira 3 xícaras)",
+    "preparation": "Encha a base com água até a válvula → coloque o café no filtro sem apertar → monte a cafeteira → aqueça em fogo baixo até o café subir",
+    "proTip": "Retire do fogo assim que terminar de subir para evitar gosto queimado"
+  },
+  "french-press": {
+    "title": "Prensa Francesa",
+    "ingredients": "Café moído grosso + Água quente",
+    "grams": "15g",
+    "proportions": "15g café / 250ml água (proporção 1:16)",
+    "preparation": "Adicione o café → despeje água a 93-96°C → deixe em infusão por 4 minutos → pressione o êmbolo lentamente",
+    "proTip": "Moagem grossa é essencial para evitar sedimentos e sobre-extracção"
+  },
+  "filtrado-manual": {
+    "title": "Filtrado Manual",
+    "ingredients": "Café moído médio + Água quente",
+    "grams": "15g",
+    "proportions": "15g café / 250ml água (proporção 1:16)",
+    "preparation": "Molhe o filtro → adicione o café → pré-infusão 30s → despeje água em círculos lentos → tempo total 2:30-3:30 min",
+    "proTip": "V60, Chemex ou Kalita: o despejo controlado define a clareza do café"
+  },
+  "cortado-argentino": {
+    "title": "Cortado Argentino",
+    "ingredients": "Espresso + Leite espumado",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 30-40ml leite espumado",
+    "preparation": "Prepare o espresso → adicione partes iguais de leite espumado → o clássico dos bares argentinos",
+    "proTip": "Na Argentina, peça \"cortado\" em qualquer bar: espresso cortado com leite, servido em copo ou xícara pequena"
   }
 } 

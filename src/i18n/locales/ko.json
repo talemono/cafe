@@ -9,6 +9,11 @@
       "withoutAlcohol": "알코올 미포함",
       "allAlcohol": "알코올 포함/미포함"
     },
+    "search": {
+      "label": "레시피 검색",
+      "placeholder": "제목 또는 재료로 검색",
+      "noResults": "레시피를 찾을 수 없습니다"
+    },
     "recipe": {
       "ingredients": "재료",
       "coffeeGrams": "커피 그램",

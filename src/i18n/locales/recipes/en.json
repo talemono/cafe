@@ -222,5 +222,45 @@
     "proportions": "30ml espresso + 60ml red vermouth + orange peel + ice",
     "preparation": "Prepare espresso and let cool → add ice to a low glass → pour vermouth → add cold espresso → aromatize with orange peel",
     "proTip": "Serve with a green olive for an interesting salty-bitter contrast"
+  },
+  "cafe-con-leche": {
+    "title": "Café con Leche",
+    "ingredients": "Espresso + Hot milk",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 120-150ml milk",
+    "preparation": "Prepare espresso → add hot milk (little or no foam)",
+    "proTip": "The breakfast classic: more milk than a latte, less foamy"
+  },
+  "moka-pot": {
+    "title": "Moka Pot Coffee",
+    "ingredients": "Medium-fine ground coffee + Water",
+    "grams": "18-20g",
+    "proportions": "18-20g coffee / ~120ml water (3-cup moka pot)",
+    "preparation": "Fill base with water to valve → place coffee in filter without pressing → assemble the pot → heat on low until coffee rises",
+    "proTip": "Remove from heat as soon as it finishes rising to avoid burnt taste"
+  },
+  "french-press": {
+    "title": "French Press",
+    "ingredients": "Coarse ground coffee + Hot water",
+    "grams": "15g",
+    "proportions": "15g coffee / 250ml water (1:16 ratio)",
+    "preparation": "Add coffee → pour water at 93-96°C → steep 4 minutes → press plunger slowly",
+    "proTip": "Coarse grind is key to avoid sediment and over-extraction"
+  },
+  "filtrado-manual": {
+    "title": "Pour Over Coffee",
+    "ingredients": "Medium ground coffee + Hot water",
+    "grams": "15g",
+    "proportions": "15g coffee / 250ml water (1:16 ratio)",
+    "preparation": "Wet the filter → add coffee → pre-infusion 30s → pour water in slow circles → total time 2:30-3:30 min",
+    "proTip": "V60, Chemex or Kalita: controlled pouring defines the clarity of the coffee"
+  },
+  "cortado-argentino": {
+    "title": "Argentine Cortado",
+    "ingredients": "Espresso + Foamed milk",
+    "grams": "7-9g",
+    "proportions": "1 shot espresso (30ml) + 30-40ml foamed milk",
+    "preparation": "Prepare espresso → add equal parts foamed milk → the classic Argentine bar drink",
+    "proTip": "In Argentina, order \"cortado\" at any bar: espresso cut with milk, served in a small glass or cup"
   }
 } 
